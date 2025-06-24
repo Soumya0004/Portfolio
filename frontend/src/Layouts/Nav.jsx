@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { Menu, X } from "lucide-react"; 
+import { Menu, X } from "lucide-react";
+
 const Nav = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const links = [
-    { name: "_about", path: "/about" },
-    { name: "_resume", path: "/resume" },
+    { name: "_about", path: "/about", external: false },
+    { name: "_resume", path: "/resume.pdf", external: true }, 
   ];
 
   return (
@@ -20,15 +21,26 @@ const Nav = () => {
 
         {/* Desktop Links */}
         <div className="hidden md:flex gap-8 items-center">
-          {links.map((link, i) => (
-            <Link
-              key={i}
-              to={link.path}
-              className="text-white hover:text-[#9796fa] transition text-2xl"
-            >
-              {link.name}
-            </Link>
-          ))}
+          {links.map((link, i) =>
+            link.external ? (
+              <a
+                key={i}
+                href={link.path}
+                download
+                className="text-white hover:text-[#9796fa] transition text-2xl"
+              >
+                {link.name}
+              </a>
+            ) : (
+              <Link
+                key={i}
+                to={link.path}
+                className="text-white hover:text-[#9796fa] transition text-2xl"
+              >
+                {link.name}
+              </Link>
+            )
+          )}
         </div>
 
         {/* Mobile Menu Icon */}
@@ -42,16 +54,28 @@ const Nav = () => {
       {/* Mobile Links Dropdown */}
       {menuOpen && (
         <div className="mt-4 flex flex-col items-start space-y-4 md:hidden">
-          {links.map((link, i) => (
-            <Link
-              key={i}
-              to={link.path}
-              className="text-[#e6c94c] hover:text-[#9796fa] transition text-xl"
-              onClick={() => setMenuOpen(false)}
-            >
-              {link.name}
-            </Link>
-          ))}
+          {links.map((link, i) =>
+            link.external ? (
+              <a
+                key={i}
+                href={link.path}
+                download
+                className="text-[#e6c94c] hover:text-[#9796fa] transition text-xl"
+                onClick={() => setMenuOpen(false)}
+              >
+                {link.name}
+              </a>
+            ) : (
+              <Link
+                key={i}
+                to={link.path}
+                className="text-[#e6c94c] hover:text-[#9796fa] transition text-xl"
+                onClick={() => setMenuOpen(false)}
+              >
+                {link.name}
+              </Link>
+            )
+          )}
         </div>
       )}
     </div>

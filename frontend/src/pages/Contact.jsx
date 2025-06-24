@@ -1,34 +1,34 @@
-import React, { useState } from 'react';
-import axios from 'axios';
+import React, { useRef } from 'react';
+import emailjs from '@emailjs/browser';
+import toast from 'react-hot-toast';
 
 const Contact = () => {
-   const onSubmit = async (event) => {
-    event.preventDefault();
-    const formData = new FormData(event.target);
+  const formRef = useRef(null);
 
-    formData.append("access_key", "089fc692-cbae-458c-92f7-0ada199546e7");
+  const onSubmit = (e) => {
+    e.preventDefault();
 
-    const object = Object.fromEntries(formData);
-    const json = JSON.stringify(object);
-
-    const res = await fetch("https://api.web3forms.com/submit", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json"
-      },
-      body: json
-    }).then((res) => res.json());
-
-    if (res.success) {
-      console.log("Success", res);
-    }
+    emailjs
+      .sendForm(
+        'service_mug514e',       // your Service ID
+        'template_6icabrj',      // your Template ID
+        formRef.current,
+        'pIY1fJ98Uj6YK-ZXI'      // your Public Key
+      )
+      .then(
+        (result) => {
+         toast.success ("Message sent successfully!");
+          formRef.current.reset();
+        },
+        (error) => {
+          toast.error("Failed to send message. Try again later.");
+          console.error(error.text);
+        }
+      );
   };
 
   return (
     <div className="px-4 sm:px-8 md:px-12 lg:px-20 py-10 bg-[#1a1a1b]">
-      <h2 className="text-center text-white text-3xl font-bold mb-6">Contact Me</h2>
-
       <div className="text-3xl text-[#9190ee] py-5 text-center">
         <span>{"{"}</span>
         <span>#</span>
@@ -50,13 +50,14 @@ const Contact = () => {
       </p>
 
       <form
+        ref={formRef}
         onSubmit={onSubmit}
         className="mt-16 max-w-3xl mx-auto text-[#9190ee] text-lg sm:text-xl flex flex-col gap-y-6 px-4 sm:px-8"
       >
         <div className="flex flex-col">
           <label htmlFor="name">_name</label>
           <input
-          name='name'
+            name="name"
             id="name"
             type="text"
             className="border-b-2 border-gray-600 bg-transparent text-white focus:outline-none py-1"
@@ -68,7 +69,7 @@ const Contact = () => {
         <div className="flex flex-col">
           <label htmlFor="email">_email</label>
           <input
-          name='email'
+            name="email"
             id="email"
             type="email"
             className="border-b-2 border-gray-600 bg-transparent text-white focus:outline-none py-1"
@@ -80,7 +81,7 @@ const Contact = () => {
         <div className="flex flex-col">
           <label htmlFor="message">_message</label>
           <textarea
-          name='message'
+            name="message"
             id="message"
             rows={4}
             className="border-b-2 border-gray-600 bg-transparent text-white focus:outline-none py-1"
@@ -89,16 +90,12 @@ const Contact = () => {
           />
         </div>
 
-        
-
         <div className="flex items-center justify-center pt-6">
           <button
             type="submit"
-            className={`bg-[#9796fa] text-[#1a1a1b]  px-6 py-2 rounded-md transition text-xl
-              
-            }`}
+            className="bg-[#9796fa] text-[#1a1a1b] px-6 py-2 rounded-md transition text-xl"
           >
-            <span className='text-white text-2xl'> {"{"} send {"}"}</span>
+            <span className="text-white text-2xl">{"{ send }"}</span>
           </button>
         </div>
       </form>

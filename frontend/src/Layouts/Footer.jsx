@@ -14,7 +14,7 @@ const Footer = () => {
         <div className="flex space-x-4 text-2xl text-[#a291fb]">
           <Link to={"https://github.com/Soumya0004"}  className="hover:text-white"><FaGithub />
 </Link>
-          <Link to={"https:www.linkedin.com/in/soumya-ranjan-mishra-848a662b9"} className="hover:text-white"><FaLinkedin />
+          <Link to={"https://linkedin.com/in/soumya-ranjan-mishra-848a662b9"} className="hover:text-white"><FaLinkedin />
 </Link>
          
         </div>
