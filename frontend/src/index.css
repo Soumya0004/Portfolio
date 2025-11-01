@@ -1,9 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
 @import "tailwindcss";
 
+/* === Custom Styles === */
+body {
+  font-family: 'VT323', monospace;
+  @apply bg-[length:40px_40px] bg-white;
+  background-image:
+    linear-gradient(to right, #0c0c0c 1px, transparent 1px),
+    linear-gradient(to bottom, #090909 1px, transparent 1px);
+}
 
 
-    body{
-        font-family: 'VT323', monospace;
-    }
-
+.graph-bg {
+  @apply bg-[length:40px_40px] bg-zinc-900;
+  background-image:
+    linear-gradient(to right, #0d0d0d 1px, transparent 1px),
+    linear-gradient(to bottom, #0b0b0b 1px, transparent 1px);
+}

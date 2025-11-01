@@ -49,7 +49,7 @@ const Skils = () => {
   ];
 
   return (
-    <div className="py-10 bg-[#1a1a1b] px-4 sm:px-8 md:px-16">
+    <div className="py-10 graph-bg px-4 sm:px-8 md:px-16">
       <div className="text-3xl text-[#9190ee] text-center">
         <span>{"{"}</span><span>/</span><span>{"}"}</span>
       </div>

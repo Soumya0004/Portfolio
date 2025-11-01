@@ -26,7 +26,7 @@ const Hero = () => {
   }, [charIndex, roleIndex, roles]);
 
   return (
-    <div className="bg-[#1a1a1b] w-full pt-10 pb-5">
+    <div className=" graph-bg w-full pt-10 pb-5">
       <div className="px-4 sm:px-8 md:px-16 text-center">
         <p className="text-white text-lg sm:text-xl">// HI, I'M SOUMYA , A...</p>
         

@@ -7,7 +7,7 @@ import Skils from '../components/Skils.jsx'
 
 const Home = () => {
   return (
-    <div className='bg-[#1a1a1b] '>
+    <div className=''>
         <Hero />
         <Bannerimg/>
         <Skils/>

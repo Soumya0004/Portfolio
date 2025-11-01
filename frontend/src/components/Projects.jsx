@@ -22,7 +22,7 @@ const Projects = () => {
   };
 
   return (
-    <div className="bg-[#1a1a1b] py-10 px-4 sm:px-8 md:px-12">
+    <div className="graph-bg py-10 px-4 sm:px-8 md:px-12">
       {/* Header */}
       <div className="text-3xl text-[#9190ee] text-center">
         <span>{"{"}</span>

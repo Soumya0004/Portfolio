@@ -3,7 +3,7 @@ import Bannerimg from "./Bannerimg";
 
 const About_page_2 = () => {
   return (
-    <div className="bg-[#1a1a1b]">
+    <div className="graph-bg">
       {/* Header */}
       <div className="flex items-center justify-center text-center px-4">
         <p className="text-4xl sm:text-6xl md:text-7xl lg:text-[8rem] font-pixel text-white pt-10 leading-tight">

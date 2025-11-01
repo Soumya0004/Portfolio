@@ -28,7 +28,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="px-4 sm:px-8 md:px-12 lg:px-20 py-10 bg-[#1a1a1b]">
+    <div className="px-4 sm:px-8 md:px-12 lg:px-20 py-10 graph-bg">
       <div className="text-3xl text-[#9190ee] py-5 text-center">
         <span>{"{"}</span>
         <span>#</span>
