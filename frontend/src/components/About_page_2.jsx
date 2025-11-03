@@ -3,9 +3,10 @@ import Bannerimg from "./Bannerimg";
 
 const About_page_2 = () => {
   return (
-    <div className="graph-bg">
+    <div className="">
       {/* Header */}
-      <div className="flex items-center justify-center text-center px-4">
+     <div className="graph-bg">
+       <div className="  flex items-center justify-center text-center px-4">
         <p className="text-4xl sm:text-6xl md:text-7xl lg:text-[8rem] font-pixel text-white pt-10 leading-tight">
           <span>{"<"}</span>
           <span className="text-white">"</span>
@@ -34,12 +35,14 @@ const About_page_2 = () => {
           web. Let’s build something awesome together!
         </p>
       </div>
+     </div>
 
       {/* Banner */}
       <Bannerimg />
 
       {/* Section Header */}
-      <div className="flex items-center justify-center text-center px-4">
+    <div className="graph-bg">
+        <div className="flex items-center justify-center text-center px-4 ">
         <p className="text-3xl sm:text-5xl md:text-6xl lg:text-[7rem] font-pixel text-white pt-10 leading-tight">
           <span>{"<"}</span>
           <span className="px-2">what drives my work</span>
@@ -79,6 +82,7 @@ const About_page_2 = () => {
           </p>
         </div>
       </div>
+    </div>
     </div>
   );
 };

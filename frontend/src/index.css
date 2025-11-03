@@ -4,10 +4,7 @@
 /* === Custom Styles === */
 body {
   font-family: 'VT323', monospace;
-  @apply bg-[length:40px_40px] bg-white;
-  background-image:
-    linear-gradient(to right, #0c0c0c 1px, transparent 1px),
-    linear-gradient(to bottom, #090909 1px, transparent 1px);
+  
 }
 
 
@@ -16,4 +13,4 @@ body {
   background-image:
     linear-gradient(to right, #0d0d0d 1px, transparent 1px),
     linear-gradient(to bottom, #0b0b0b 1px, transparent 1px);
-}
+} 

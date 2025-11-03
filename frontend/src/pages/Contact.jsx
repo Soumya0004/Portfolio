@@ -93,7 +93,7 @@ const Contact = () => {
         <div className="flex items-center justify-center pt-6">
           <button
             type="submit"
-            className="bg-[#9796fa] text-[#1a1a1b] px-6 py-2 rounded-md transition text-xl"
+            className="bg-[#9796fa] hover:shadow-[#8b8bfb] cursor-pointer shadow-sm hover:bg-[#8b8bfb] text-[#1a1a1b] px-6 py-2 rounded-md transition text-xl"
           >
             <span className="text-white text-2xl">{"{ send }"}</span>
           </button>
