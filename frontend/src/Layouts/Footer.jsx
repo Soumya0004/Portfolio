@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
-     <footer className="graph-bg text-[#a291fb] py-6 px-4 text-sm">
+     <footer className="bg-[#18181b] text-[#a291fb] py-3 px-4 text-sm">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center ">
 
         {/* Left - Navigation Links */}

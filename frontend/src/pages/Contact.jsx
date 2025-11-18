@@ -52,7 +52,7 @@ const Contact = () => {
       <form
         ref={formRef}
         onSubmit={onSubmit}
-        className="mt-16 max-w-3xl mx-auto text-[#9190ee] text-lg sm:text-xl flex flex-col gap-y-6 px-4 sm:px-8"
+        className="mt-16 max-w-3xl mx-auto text-[#9190ee] text-lg sm:text-xl flex flex-col gap-y-6 px-4 sm:px-8 "
       >
         <div className="flex flex-col">
           <label htmlFor="name">_name</label>

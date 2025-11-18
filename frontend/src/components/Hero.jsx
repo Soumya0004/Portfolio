@@ -20,21 +20,23 @@ const Hero = () => {
     const timeout = setTimeout(() => {
       setText('');
       setCharIndex(0);
-      setRoleIndex((prev) => (prev + 1) % roles.length);
+      setRoleIndex(prev => (prev + 1) % roles.length);
     }, 1500);
+
     return () => clearTimeout(timeout);
-  }, [charIndex, roleIndex, roles]);
+  }, [charIndex, roleIndex]);
 
   return (
-    <div className=" graph-bg w-full pt-10 pb-5">
-      <div className="px-4 sm:px-8 md:px-16 text-center">
-        <p className="text-white text-lg sm:text-xl">// HI, I'M SOUMYA , A...</p>
-        
+    <div className="graph-bg w-full pt-10 pb-5">
+      <div className="relative z-10 px-4 sm:px-8 md:px-16 text-center">
+        <p className="text-white text-lg sm:text-xl">
+          // HI, I'M SOUMYA , A...
+        </p>
+
         <p className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-[8rem] font-pixel text-white pt-6 sm:pt-10 leading-tight">
           {"{"}"
-          <span className="text-[#9796fa] px-2  ">{text}</span>
+          <span className="text-[#9796fa] px-2">{text}</span>
           "
-          
           {"}"}
         </p>
 
@@ -44,7 +46,7 @@ const Hero = () => {
       </div>
 
       {/* Down Arrow */}
-      <div className="flex justify-center text-white pt-5">
+      <div className="relative z-10 flex justify-center text-white pt-5">
         <span className="text-2xl rotate-90 animate-pulse">=={">"}</span>
       </div>
     </div>
