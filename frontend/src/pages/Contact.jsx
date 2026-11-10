@@ -28,7 +28,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="px-4 sm:px-8 md:px-12 lg:px-20 py-10 graph-bg">
+    <div className="px-4 sm:px-8 md:px-12 lg:px-20 py-10">
       <div className="text-3xl text-[#9190ee] py-5 text-center">
         <span>{"{"}</span>
         <span>#</span>
@@ -36,7 +36,7 @@ const Contact = () => {
       </div>
 
       <div className="flex items-center justify-center text-center">
-        <p className="text-4xl sm:text-6xl lg:text-[8rem] font-pixel text-white leading-tight">
+        <p className="text-4xl sm:text-6xl lg:text-[7rem] font-pixel text-white leading-tight">
           <span>{"<"}</span>
           <span className="text-white">"</span>
           <span className="text-[#9796fa] px-2 sm:px-3">contact_me</span>
@@ -45,14 +45,14 @@ const Contact = () => {
         </p>
       </div>
 
-      <p className="text-white text-base sm:text-lg max-w-2xl mx-auto text-center leading-relaxed mt-6">
+      <p className="text-white text-sm sm:text-md max-w-2xl mx-auto text-center leading-relaxed mt-6 font-general">
         Let's build something amazing together! Whether it's an idea, project, or collaboration — feel free to reach out anytime.
       </p>
 
       <form
         ref={formRef}
         onSubmit={onSubmit}
-        className="mt-16 max-w-3xl mx-auto text-[#9190ee] text-lg sm:text-xl flex flex-col gap-y-6 px-4 sm:px-8 "
+        className="mt-10 max-w-3xl mx-auto text-[#9190ee] text-lg sm:text-xl flex flex-col gap-y-6 px-4 sm:px-8 "
       >
         <div className="flex flex-col">
           <label htmlFor="name">_name</label>

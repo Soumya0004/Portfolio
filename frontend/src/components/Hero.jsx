@@ -27,20 +27,20 @@ const Hero = () => {
   }, [charIndex, roleIndex]);
 
   return (
-    <div className="graph-bg w-full pt-10 pb-5">
+    <div className=" w-full pt-10 pb-5">
       <div className="relative z-10 px-4 sm:px-8 md:px-16 text-center">
         <p className="text-white text-lg sm:text-xl">
           // HI, I'M SOUMYA , A...
         </p>
 
-        <p className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-[8rem] font-pixel text-white pt-6 sm:pt-10 leading-tight">
+        <p className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-[7rem] font-pixel text-white pt-6 sm:pt-10 leading-tight">
           {"{"}"
           <span className="text-[#9796fa] px-2">{text}</span>
           "
           {"}"}
         </p>
 
-        <p className="text-white text-sm sm:text-lg px-2 sm:px-5 max-w-3xl mx-auto mt-6 leading-relaxed">
+        <p className="text-white text-sm  px-2 sm:px-5 max-w-3xl mx-auto mt-6 leading-relaxed font-general">
           I specialize in HTML, CSS, JavaScript, React, Express, MongoDB, and Next.js—building full-stack apps with clean UI and smooth backend logic.
         </p>
       </div>

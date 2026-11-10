@@ -11,7 +11,7 @@ const Nav = () => {
   ];
 
   return (
-    <div className="w-full bg-[#18181b] px-6 py-`1">
+    <div className="w-full bg-zinc-900 px-6 py-`1">
       <div className="flex justify-between items-center">
         {/* Branding */}
         <Link to="/">

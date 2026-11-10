@@ -9,7 +9,7 @@ import Footer from "./Layouts/Footer.jsx";
 
 const App = () => {
   return (
-    <div div className="bg-[#1a1a1b] ">
+    <div div className="bg-zinc-900 ">
       <Nav />
       <Routes>
         <Route path="/" element={<Home />} />

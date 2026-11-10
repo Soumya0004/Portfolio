@@ -5,7 +5,7 @@ const About_page_2 = () => {
   return (
     <div className="">
       {/* Header */}
-     <div className="graph-bg">
+     <div className="">
        <div className="  flex items-center justify-center text-center px-4">
         <p className="text-4xl sm:text-6xl md:text-7xl lg:text-[8rem] font-pixel text-white pt-10 leading-tight">
           <span>{"<"}</span>
@@ -41,7 +41,7 @@ const About_page_2 = () => {
       <Bannerimg />
 
       {/* Section Header */}
-    <div className="graph-bg">
+    <div className="">
         <div className="flex items-center justify-center text-center px-4 ">
         <p className="text-3xl sm:text-5xl md:text-6xl lg:text-[7rem] font-pixel text-white pt-10 leading-tight">
           <span>{"<"}</span>

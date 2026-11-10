@@ -49,7 +49,7 @@ const Skils = () => {
   ];
 
   return (
-    <div className="py-10 graph-bg px-4 sm:px-8 md:px-16">
+    <div className="py-10  px-4 sm:px-8 md:px-16">
       <div className="text-3xl text-[#9190ee] text-center">
         <span>{"{"}</span><span>/</span><span>{"}"}</span>
       </div>
@@ -62,7 +62,7 @@ const Skils = () => {
         </p>
       </div>
 
-      <p className="text-white text-base sm:text-lg px-2 sm:px-5 max-w-3xl mx-auto text-center leading-relaxed mt-6">
+      <p className="text-white text-sm sm:text-md px-2 sm:px-5 max-w-3xl mx-auto text-center leading-relaxed mt-6 font-general">
         {showFullText ? fullText : getFirstWords(fullText, 20) + "... "}
         <span
           onClick={() => setShowFullText(!showFullText)}
@@ -83,7 +83,7 @@ const Skils = () => {
       {skill.icon}
     </div>
     <p className="text-2xl">{skill.title}</p>
-    <p className="pt-4 text-white">{skill.desc}</p>
+    <p className="pt-4 text-white font-general text-sm">{skill.desc}</p>
   </div>
 ))}
 
